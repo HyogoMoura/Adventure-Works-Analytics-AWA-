@@ -1,0 +1,55 @@
+models:
+- name: fct_sales
+  description: Tabela fato contendo métricas de vendas no grão de item de pedido.
+  columns:
+
+    - name: sales_order_item_sk
+      description: Chave substituta que representa um item único de pedido.
+      tests:
+        - unique
+        - not_null
+
+    - name: product_sk
+      description: Chave da dimensão produto.
+      tests:
+        - not_null
+
+    - name: customer_sk
+      description: Chave da dimensão cliente.
+      tests:
+        - not_null
+
+    - name: date_sk
+      description: Chave da dimensão data.
+      tests:
+        - not_null
+    
+    - name: location_sk
+      description: Chave da dimensão localidade.
+
+    - name: credit_card_sk
+      description: Chave da dimensão cartão.
+
+    - name: sales_reason_sk
+      description: Chave da dimensão motivo de venda.
+
+    - name: status_sk
+      description: Chave da dimensão status.
+
+    - name: quantity
+      description: Quantidade comprada do produto.
+
+    - name: unit_price
+      description: Valor unitário do produto.
+
+    - name: gross_amount
+      description: Valor bruto negociado calculado como quantidade multiplicada pelo preço unitário.
+
+    - name: discount_amount
+      description: Valor total de desconto aplicado ao item.
+
+    - name: net_amount
+      description: Valor líquido negociado após descontos.
+      
+    - name: order_count
+      description: Indicador utilizado para contagem de pedidos.
