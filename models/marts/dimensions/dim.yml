@@ -1,0 +1,105 @@
+models:
+  - name: dim_product
+    description: Dimensão que contém os atributos dos produtos comercializados pela Adventure Works.
+    columns:
+      - name: product_sk
+        description: Chave substituta da dimensão produto.
+        tests:
+          - unique
+          - not_null
+      - name: product_pk
+        description: Identificador do produto no sistema transacional.
+
+      - name: product_name
+        description: Nome do produto.
+
+      - name: category_name
+        description: Categoria do produto.
+
+      - name: subcategory_name
+        description: Subcategoria do produto.
+
+  - name: dim_customers
+    description: Dimensão que contém informações dos clientes.
+    columns:
+      - name: customer_sk
+        description: Chave substituta da dimensão cliente.
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_name
+        description: Nome completo do cliente.
+
+  - name: dim_location
+    description: Dimensão geográfica utilizada nas análises de vendas.
+    columns:
+      - name: location_sk
+        description: Chave substituta da dimensão localidade.
+        tests:
+          - unique
+          - not_null
+
+      - name: city
+        description: Cidade do endereço de entrega.
+
+      - name: state_province_name
+        description: Estado ou província.
+
+      - name: country_name
+        description: País.
+
+  - name: dim_cards
+    description: Dimensão contendo os tipos de cartão utilizados nas compras.
+    columns:
+      - name: credit_card_sk
+        description: Chave substituta da dimensão cartão.
+        tests:
+          - unique
+          - not_null
+
+      - name: card_type
+        description: Tipo do cartão utilizado na compra.
+
+  - name: dim_sales_reason
+    description: Dimensão contendo os motivos de venda associados aos pedidos.
+    columns:
+      - name: sales_reason_sk
+        description: Chave substituta da dimensão motivo de venda.
+        tests:
+          - unique
+          - not_null
+      - name: sales_reason_name
+        description: Nome do motivo da venda.
+
+      - name: reason_type
+        description: Categoria do motivo da venda.
+
+  - name: dim_date
+    description: Dimensão calendário utilizada para análises temporais.
+    columns:
+      - name: date_sk
+        description: Chave substituta da dimensão data.
+        tests:
+          - unique
+          - not_null
+      - name: full_date
+        description: Data completa.
+
+      - name: month_name
+        description: Nome do mês.
+
+      - name: year_number
+        description: Ano da venda.
+
+  - name: dim_status
+    description: Dimensão de status do pedido de venda.
+    columns:
+      - name: status_sk
+        description: Chave substituta do status.
+        tests:
+          - unique
+          - not_null
+
+      - name: status_name
+        description: Descrição textual do status do pedido.

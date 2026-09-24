@@ -11,7 +11,7 @@ renamed as (
     cast(orderqty as float) as quantity,
     cast(productid as int) as product_fk,
     cast(unitprice as float) as unit_price, 
-    round(cast(unitpricediscount as float),2) as unit_price_disct ,
+    cast(unitpricediscount as decimal(18,6)) as unit_price_disct ,
     cast(modifieddate as date) as modifie_ddate
     from source_sales
 )

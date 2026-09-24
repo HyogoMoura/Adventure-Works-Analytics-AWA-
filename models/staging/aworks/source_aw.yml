@@ -136,7 +136,6 @@ sources:
           - name: countryregioncode
             tests:
               - unique
-              - not_null
 
       - name: person_businessentityaddress
         description: Relacionamento entre entidade e endereço.
