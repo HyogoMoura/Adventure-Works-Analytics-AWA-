@@ -5,7 +5,7 @@ with source_sales as (
 
 renamed as (
     select
-    {{dbt_utils.generate_surrogate_key(['salesorderdetailid','salesorderid'])}} as orde_item_sk,
+    {{ dbt_utils.generate_surrogate_key(['salesorderdetailid','salesorderid']) }} as sales_order_item_sk,
     cast(salesorderdetailid as int) as order_pk,
     cast(salesorderid AS INT) AS sales_fk,
     cast(orderqty as float) as quantity,
