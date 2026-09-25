@@ -11,4 +11,4 @@ with validation as (
 
 select *
 from validation
-where abs(total_sales - 12646112.16) > 1
+where total_sales <> 12646112.16
