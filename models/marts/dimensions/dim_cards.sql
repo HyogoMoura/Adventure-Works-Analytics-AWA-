@@ -1,7 +1,7 @@
 with source as (
 
     select *
-    from {{ ref('stg_aworks__sales_creditcard') }}
+    from {{ ref('int_aworks__sales_credit_card') }}
 
 )
 
