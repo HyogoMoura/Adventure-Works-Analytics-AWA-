@@ -1,8 +1,6 @@
 with source as (
-
     select *
     from {{ source('aworks', 'humanresources_employee') }}
-
 ),
 
 renamed as (
@@ -23,7 +21,6 @@ renamed as (
         cast(organizationnode as string) as organization_node,
         cast(modifieddate as timestamp) as modified_date
     from source
-
 )
 
 select *
