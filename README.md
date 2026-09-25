@@ -1,5 +1,3 @@
-# Adventure-Works-Analytics-AWA-
-
 # Adventure Works Analytics Engineering Project
 
 ## Visão Geral
